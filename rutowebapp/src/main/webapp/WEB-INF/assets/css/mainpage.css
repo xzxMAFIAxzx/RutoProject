@@ -1,0 +1,11 @@
+.btnMain{
+    background:none;
+    border:none;
+    padding:0;
+    color:inherit;
+    text-align:left;
+    cursor:pointer;"
+}
+.img_background{
+background-image: url("/WEB-INF/images/sty.jpg");
+}
