@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d0ca85-15ea-44ce-87bb-3321f01dc116" name="Changes" comment="new versin 0.1" />
+    <list default="true" id="49d0ca85-15ea-44ce-87bb-3321f01dc116" name="Changes" comment="new versin 0.1">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +81,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -270,6 +273,7 @@
       <workItem from="1728326465594" duration="7682000" />
       <workItem from="1728409518951" duration="11688000" />
       <workItem from="1728498030354" duration="355000" />
+      <workItem from="1728500038122" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="new versin 0.1">
       <option name="closed" value="true" />

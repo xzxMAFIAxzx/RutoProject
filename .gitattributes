@@ -1,0 +1,6 @@
+* text=auto
+*.min.js linguist-vendored
+*.md linguist-detectable=false
+*.png binary
+*.jpg binary
+
