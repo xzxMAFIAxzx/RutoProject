@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="rutowebapp:war exploded" />
+      <artifact name="rutowebapp:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,8 +10,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d0ca85-15ea-44ce-87bb-3321f01dc116" name="Changes" comment="new versin 0.1">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/filter/JspFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/filter/SecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/rutoController/ErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/rutoController/LogOutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/rutoController/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/rutoController/MainPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/rutoController/UserDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/util/ControllerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/project-local-repo/com.company/RutoDbAppJPASpring/0.0.2/RutoDbAppJPASpring-0.0.2-consumer.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/project-local-repo/com.company/RutoDbAppJPASpring/0.0.2/RutoDbAppJPASpring-0.0.2.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/project-local-repo/com.company/RutoDbAppJPASpring/0.0.2/RutoDbAppJPASpring-0.0.2.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/257f59bc-2d19-44e3-b197-f3cc4a2a3b7a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/257f59bc-2d19-44e3-b197-f3cc4a2a3b7a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/RutoDbAppJpaSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/RutoDbAppJpaSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/CountryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/CountryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/impl/UserRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/inter/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/dao/inter/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/entity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/entity/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/service/inter/UserServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/java/com/company/service/inter/UserServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/RutoDbAppJPASpring/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/form/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/java/com/company/form/UserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/mainpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/mainpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/userdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/userdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/rutowebapp/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/ruto.multimodule/ruto.multimodule/0.0.1/ruto.multimodule-0.0.1-consumer.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/ruto.multimodule/ruto.multimodule/0.0.1/ruto.multimodule-0.0.1-consumer.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resume.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/resume.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +64,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RutoWebApp" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -51,15 +92,20 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2mye9tHYcJ4fsPUor8izdux5EiO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.CountryDaoImpl.executor&quot;: &quot;Run&quot;,
     &quot;Application.RutoDbAppJpaSpringApplication (1).executor&quot;: &quot;Run&quot;,
     &quot;Application.RutoDbAppJpaSpringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserRepositoryCustomImpl.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -95,30 +141,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mafia\IdeaProjects\RutoAppByUsingSpringNew\rutowebapp\src\main\java\com\company" />
       <recent name="C:\Users\Mafia\IdeaProjects\RutoAppByUsingSpringNew\rutowebapp\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mafia\IdeaProjects\RutoAppByUsingSpringNew\rutowebapp\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.company" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="com.company" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RutoDbAppJpaSpringApplication (1)">
-    <configuration name="RutoDbAppJpaSpringApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.RutoDbAppJpaSpringApplication" />
-      <module name="RutoDbAppJPASpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.28">
     <configuration name="RutoDbAppJpaSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="RutoDbAppJPASpring" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.RutoDbAppJpaSpringApplication" />
@@ -127,9 +164,8 @@
       </method>
     </configuration>
     <configuration name="RutowebappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="rutowebapp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.RutowebappApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.RutowebappApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,18 +180,23 @@
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
+        <artifact name="rutowebapp:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/rutowebapp_war" />
+          </settings>
+        </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="38773abe-6881-45aa-b9f9-0650dba33d61" />
+        <option name="BASE_DIRECTORY_NAME" value="f8e3074f-8015-4f63-bf9b-c03877772488" />
         <option name="HTTP_PORT" value="8085" />
       </server-settings>
-      <log_file alias="Tomcat Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/manager.*" />
+      <log_file alias="Tomcat Localhost Access Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost_access_log.*" />
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50674" />
+        <option name="DEBUG_PORT" value="62783" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -218,23 +259,20 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="rutowebapp:war exploded" />
+          <artifact name="rutowebapp:war" />
+        </option>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="rutowebapp:war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.RutoDbAppJpaSpringApplication (1)" />
       <item itemvalue="Spring Boot.RutoDbAppJpaSpringApplication" />
       <item itemvalue="Spring Boot.RutowebappApplication" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.28" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.RutoDbAppJpaSpringApplication (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -273,7 +311,24 @@
       <workItem from="1728326465594" duration="7682000" />
       <workItem from="1728409518951" duration="11688000" />
       <workItem from="1728498030354" duration="355000" />
-      <workItem from="1728500038122" duration="238000" />
+      <workItem from="1728500038122" duration="8277000" />
+      <workItem from="1728593659531" duration="2814000" />
+      <workItem from="1728596872448" duration="743000" />
+      <workItem from="1728673593775" duration="2142000" />
+      <workItem from="1728925464999" duration="10683000" />
+      <workItem from="1729011221254" duration="11303000" />
+      <workItem from="1729096416255" duration="9202000" />
+      <workItem from="1729183726507" duration="1991000" />
+      <workItem from="1729190511481" duration="4059000" />
+      <workItem from="1729195767159" duration="50000" />
+      <workItem from="1729196978088" duration="3053000" />
+      <workItem from="1729227003703" duration="9815000" />
+      <workItem from="1729237426057" duration="3033000" />
+      <workItem from="1729247238775" duration="3721000" />
+      <workItem from="1729358581380" duration="8219000" />
+      <workItem from="1729367295948" duration="1140000" />
+      <workItem from="1729368565151" duration="1752000" />
+      <workItem from="1729408944614" duration="12035000" />
     </task>
     <task id="LOCAL-00001" summary="new versin 0.1">
       <option name="closed" value="true" />
@@ -283,14 +338,54 @@
       <option name="project" value="LOCAL" />
       <updated>1728498203090</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new versin 0.1">
+      <option name="closed" value="true" />
+      <created>1728500324814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728500324814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="new versin 0.1" />
     <option name="LAST_COMMIT_MESSAGE" value="new versin 0.1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.LazyInitializationException" package="org.hibernate" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.company.service.impl.UserServiceImpl$$SpringCGLIB$$0" memberName="userRepository" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((LazyInitializationException)LazyInitializationException13761_DebugLabel).detailMessage" custom="org.hibernate.LazyInitializationException" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

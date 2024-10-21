@@ -5,6 +5,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 
 
 import com.company.entity.User;
+import com.company.service.inter.UserServiceInter;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
@@ -12,16 +13,19 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
-
+@Qualifier("userDao")
 @Repository
-@Transactional
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
     @PersistenceContext
     EntityManager em;
@@ -77,16 +81,16 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 
     @Override
     @Cacheable(value = "users")
-    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc, Integer nationalityId, Integer birthplaceId, Date birthDate) {
+    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc, Integer nationality, Integer birthplace, Date birthDate) {
         String jpql = "select u from User u where 1=1";
 
         if (name != null && !name.trim().isEmpty()) {
             jpql += " and u.name=:name ";
         }
         if (surname != null && !surname.trim().isEmpty()) {
-            jpql += " and u.surname=:surname  ";
+            jpql += " and u.surname=:surname ";
         }
-        if (nationalityId != null) {
+        if (nationality != null) {
             jpql += " and u.nationality.id=:nid ";
         }
 
@@ -99,8 +103,8 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         if (surname != null && !surname.trim().isEmpty()) {
             query.setParameter("surname", surname);
         }
-        if (nationalityId != null) {
-            query.setParameter("nid", nationalityId);
+        if (nationality != null) {
+            query.setParameter("nid", nationality);
         }
 
         return query.getResultList();
@@ -165,7 +169,6 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
         }
         return null;
     }
-
 
 }
 

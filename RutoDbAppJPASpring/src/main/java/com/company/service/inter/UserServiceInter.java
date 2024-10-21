@@ -2,12 +2,12 @@ package com.company.service.inter;
 
 import com.company.entity.User;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 public interface UserServiceInter  {
-    public List<User> getUserSimple(String name, String surname, String email, String adress, String phone, Integer nationalityId);
-    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc , Integer nationalityId, Integer birthplaceId, Date birthDate);
+    public List<User> getUserSimple(String name, String surname, String email, String adress, String phone, Integer nationality);
+    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc , Integer nationality, Integer birthplace, Date birthDate);
     public User findByNameAndSurname(String name, String surname);
     public User findByPhone(String phone);
     public User getById(int id);

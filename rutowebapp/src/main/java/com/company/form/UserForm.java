@@ -1,5 +1,9 @@
 package com.company.form;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.sql.Date;
 
 public class UserForm {
@@ -11,13 +15,13 @@ public class UserForm {
     private String adress;
     private String password;
     private Date birthDate;
-    private Integer nationalityId;
-    private Integer birthplaceId;
+    private Integer nationality;
+    private Integer birthplace;
 
     public UserForm() {
     }
 
-    public UserForm(String name, String surname, String phone, String email, String profileDesc, String adress, String password, Date birthDate, Integer nationalityId, Integer birthplaceId) {
+    public UserForm(String name, String surname, String phone, String email, String profileDesc, String adress, String password, Date birthDate, Integer nationality, Integer birthplace) {
         this.name = name;
         this.surname = surname;
         this.phone = phone;
@@ -26,8 +30,8 @@ public class UserForm {
         this.adress = adress;
         this.password = password;
         this.birthDate = birthDate;
-        this.nationalityId = nationalityId;
-        this.birthplaceId = birthplaceId;
+        this.nationality = nationality;
+        this.birthplace = birthplace;
     }
 
     public String getName() {
@@ -74,7 +78,7 @@ public class UserForm {
         return adress;
     }
 
-    public void setAddress(String adress) {
+    public void setAdress(String adress) {
         this.adress = adress;
     }
 
@@ -94,19 +98,21 @@ public class UserForm {
         this.birthDate = birthDate;
     }
 
-    public Integer getNationalityId() {
-        return nationalityId;
+    public Integer getNationality() {
+        return nationality;
     }
 
-    public void setNationalityId(Integer nationalityId) {
-        this.nationalityId = nationalityId;
+    public void setNationality(Integer nationality) {
+        this.nationality = nationality;
     }
 
     public Integer getBirthplace() {
-        return birthplaceId;
+        return birthplace;
     }
 
-    public void setBirthplaceId(Integer birthplaceId) {
-        this.birthplaceId = birthplaceId;
+    public void setBirthplace(Integer birthplace) {
+        this.birthplace = birthplace;
     }
+
 }
+

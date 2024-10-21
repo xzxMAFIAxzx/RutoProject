@@ -14,9 +14,8 @@ import java.util.Objects;
         @NamedQuery(name = "User.findByPhone",query = "select u from User u where u.phone = :phone")
 })
 public class User implements Serializable {
+
     private static final long serialVersionUID = 1L;
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -45,12 +44,11 @@ public class User implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date birthDate;
 
-//    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user",fetch = FetchType.LAZY)
-//    private List<UserSkill> userSkillList;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "birthplace_id",referencedColumnName = "id")
     private Country birthplace ;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "nationality_id",referencedColumnName = "id")
     private Country nationality ;
@@ -67,7 +65,7 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public User(int id, String name, String surname, String phone, String email, String adress, String profileDesc, Date birthDate, Country nationality, Country birthplace) {
+    public User(int id, String name, String surname, String phone, String email, String adress, String profileDesc, Date birthDate,Country birthplace, Country nationalityId) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -75,7 +73,7 @@ public class User implements Serializable {
         this.email = email;
         this.adress = adress;
         this.birthDate = birthDate;
-        this.nationality = nationality;
+        this.nationality = nationalityId;
         this.birthplace = birthplace;
         this.profileDesc = profileDesc;
     }
@@ -156,8 +154,8 @@ public class User implements Serializable {
         return nationality;
     }
 
-    public void setNationality(Country nationality) {
-        this.nationality = nationality;
+    public void setNationality(Country nationalityId) {
+        this.nationality = nationalityId;
     }
 
     public String getPassword() {
@@ -168,20 +166,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-//    public List<UserSkill> getUserSkillList() {
-//        return userSkillList;
-//    }
-//
-//    public void setUserSkillList(List<UserSkill> userSkillList) {
-//        this.userSkillList = userSkillList;
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(email, user.email) && Objects.equals(phone, user.phone) && Objects.equals(profileDesc, user.profileDesc) && Objects.equals(adress, user.adress) && Objects.equals(birthDate, user.birthDate) &&  Objects.equals(birthplace, user.birthplace) && Objects.equals(nationality, user.nationality) && Objects.equals(password, user.password);
+        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(email, user.email) && Objects.equals(phone, user.phone) && Objects.equals(profileDesc, user.profileDesc) && Objects.equals(adress, user.adress) && Objects.equals(birthDate, user.birthDate) && Objects.equals(birthplace, user.birthplace) && Objects.equals(nationality, user.nationality) && Objects.equals(password, user.password);
     }
 
     @Override
@@ -200,10 +190,9 @@ public class User implements Serializable {
                 ", profileDesc='" + profileDesc + '\'' +
                 ", adress='" + adress + '\'' +
                 ", birthDate=" + birthDate +
-//                ", userSkillList=" + userSkillList +
-                ", birthplace=" + birthplace +
-                ", nationality=" + nationality +
-                ", password='" + password + '\'' +
+                ", birthplace=" + birthplace.getBirthplace()+
+                ", nationality=" + nationality.getNationality() +
+                ", password='******" + password + '\'' +
                 '}';
     }
 }

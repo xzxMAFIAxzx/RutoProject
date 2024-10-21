@@ -1,5 +1,6 @@
 package com.company.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "country")
 public class Country implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
 
@@ -17,10 +19,13 @@ public class Country implements Serializable {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @OneToMany( mappedBy = "nationality")
+
+    @OneToMany( mappedBy = "nationality",fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<User> nationality ;
 
-   @OneToMany( mappedBy = "birthplace")
+    @OneToMany( mappedBy = "birthplace",fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<User> birthplace;
 
 
@@ -51,11 +56,11 @@ public class Country implements Serializable {
         this.nationality = nationality;
     }
 
-    public List<User> getBirthPlace() {
+    public List<User> getBirthplace() {
         return birthplace;
     }
 
-    public void setBirthPlace(List<User> birthplace) {
+    public void setBirthplace(List<User> birthplace) {
         this.birthplace = birthplace;
     }
 
@@ -64,7 +69,7 @@ public class Country implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Country country = (Country) o;
-        return Objects.equals(id, country.id)&& Objects.equals(nationality, country.birthplace) && Objects.equals(birthplace, country.birthplace);
+        return Objects.equals(id, country.id)&& Objects.equals(nationality, country.nationality) && Objects.equals(birthplace, country.birthplace);
     }
 
     @Override
@@ -74,11 +79,6 @@ public class Country implements Serializable {
 
     @Override
     public String toString() {
-        return "Country{" +
-                "id=" + id +
-                 '\'' +
-                ", nationality=" + nationality +
-                ", birthplace=" + birthplace +
-                '}';
+        return " "+id;
     }
 }

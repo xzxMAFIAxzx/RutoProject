@@ -1,9 +1,8 @@
-<%@ page import="entity.User" %>
-<%@ page import="java.util.List" %>
-<%@ page import="dao.impl.UserDaoImpl" %>
-<%@ page import="main.Context" %>
-<%@ page import="dao.inter.UserDaoInter" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -21,16 +20,6 @@
 </head>
 <body>
 
-<%
-    User user = (User) session.getAttribute("loggedInUser");
-%>
-<%="Welcome  " + user.getName()%>
-<style class="img_background">
-    body {
-        background-image: url('/images/sty.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -48,7 +37,7 @@
             </form>
             <form action="userdetail" method="GET">
                 <input type="hidden" name="action" value="profile"/>
-                <input type="hidden" name="id" value="<%=user.getId()%>"/>
+                <input type="hidden" name="id" value=""/>
                 <li class="nav-item">
                     <button class="btnMain" type="submit" class="nav-link" value="profile">
                         Profile

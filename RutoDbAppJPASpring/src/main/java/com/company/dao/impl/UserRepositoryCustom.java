@@ -3,7 +3,7 @@ package com.company.dao.impl;
 
 import com.company.entity.User;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 public interface UserRepositoryCustom {

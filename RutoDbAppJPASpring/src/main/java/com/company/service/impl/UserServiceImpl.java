@@ -6,12 +6,14 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.impl.UserRepositoryCustom;
 import com.company.entity.User;
 import com.company.service.inter.UserServiceInter;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Date;
+
+import java.util.Date;
 import java.util.List;
 
 
@@ -24,14 +26,14 @@ public class UserServiceImpl implements UserServiceInter {
     private UserRepositoryCustom userRepository;
 
     @Override
-    public List<User> getUserSimple(String name, String surname, String email, String adress, String phone, Integer nationalityId)  {
-       return userRepository.getUserSimple(name, surname, email, adress, phone, nationalityId);
+    public List<User> getUserSimple(String name, String surname, String email, String adress, String phone, Integer nationality)  {
+       return userRepository.getUserSimple(name, surname, email, adress, phone, nationality);
     }
 
     @Override
-    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc, Integer nationalityId, Integer birthplaceId, Date birthDate) {
+    public List<User> getAll(String name, String surname, String phone, String email, String adress, String profilDesc, Integer nationality, Integer birthplace, Date birthDate) {
 
-        return userRepository.getAll(name,surname,phone,email,adress,profilDesc,nationalityId,birthplaceId,birthDate);
+        return userRepository.getAll(name,surname,phone,email,adress,profilDesc,nationality,birthplace,birthDate);
     }
     @Override
     public User getById(int userId) {

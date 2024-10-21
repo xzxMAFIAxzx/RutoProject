@@ -2,6 +2,7 @@ package com.company.dao.impl;
 
 
 import com.company.dao.inter.CountryDaoInter;
+
 import com.company.entity.Country;
 import com.company.entity.Skill;
 import com.company.entity.User;
@@ -15,7 +16,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.company.dao.inter.AbstractDAO.em;
 
 @Repository
 public class CountryDaoImpl  implements CountryDaoInter {
@@ -23,22 +23,11 @@ public class CountryDaoImpl  implements CountryDaoInter {
     EntityManager em;
 
 
-    public Country getCountry(ResultSet rs) throws SQLException {
-        Integer countryId = rs.getInt("id");
-        int nationality = rs.getInt("nationality");
-        int birthPlace = rs.getInt("birthPlace");
-
-
-        return new Country(null, null, countryId);
-    }
-
     @Override
-    public Country getById(int countyrID) {
-        Country c = em.find(Country.class, countyrID);
+    public Country getById(int countyrId) {
+        Country c = em.find(Country.class, countyrId);
         return c;
     }
-
-
 
     @Override
     public List<Country> getAllCountry(String birthplace, String nationality) {

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 
 
 <!DOCTYPE html>
@@ -29,35 +29,36 @@
 <div class=" container mycontainer">
     <div>
         <div class="col-4">
-            <form:form action="users" method="GET" modelAttribute="user">
+            <f:form action="users" method="GET" modelAttribute="user">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <form:input placeholder="Enter Name"
+                    <f:input placeholder="Enter Name"
                                 class="form-control"
                                 path="name"
                                 id="whatIamtyping"/>
                     <small id="emailHelp" class="form-text text-muted">Axtarish etmek ucun ad qeyd edin</small>
+                    <f:errors path="name" cssClass="error"/>
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname:</label>
-                    <form:input
+                    <f:input
                             placeholder="Enter Surname"
                             class="form-control"
                             path="surname"/>
+                    <f:errors path="surname"/>
                 </div>
-                <form:button  type="submit" class="btn btn-primary">Search</form:button>
-                <form:button class="btn btn-primary" type="submit" value="back">Back</form:button>
-            </form:form>
+                <f:button  type="submit" class="btn btn-primary">Search</f:button>
+                <f:button class="btn btn-primary" type="submit" value="back">Back</f:button>
+            </f:form>
         </div>
         <div>
+            <f:errors path="*"/>
             <table class="table">
                 <thead>
                 <tr>
                     <th>name</th>
                     <th>Surname</th>
                     <th>Nationality</th>
-                    <th></th>
-                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -65,7 +66,7 @@
                     <tr>
                         <td>${u.name}</td>
                         <td>${u.surname}</td>
-                        <td>${u.nationality}</td>
+                        <td>${u.nationality.id}</td>
                         <td style="width:5px">
                             <input type="hidden" name="id" value="${u.id}"/>
                             <input type="hidden" name="action" value="delete"/>
@@ -96,7 +97,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -107,7 +108,7 @@
                 <form action="userdetail" method="POST">
                     <input type="hidden" name="id" id="idForDelete"/>
                     <input type="hidden" name="action" value="delete"/>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <input type="submit" class="btn btn-danger" value="Delete">
                 </form>
             </div>
